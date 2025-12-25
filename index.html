@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Y2K Future | 3D Experience</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- 3D Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Floating Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">Joey<span style="color: var(--neon-cyan)">.</span>DEV</a>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="values.html">Values</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <button id="theme-toggle" class="btn-sm" style="padding: 0.6rem;">☀/☾</button>
+      <button class="btn-sm" onclick="window.location.href='contact.html'">Connect</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- 1. Landing Page -->
+    <section id="home" class="hero container">
+      <div class="hero-content">
+        <h1>Joey <br> <span class="gradient-text">Developer<br> Builder</span></h1>
+        <p style="color: var(--text-muted); max-width: 600px; margin-top: 1.5rem; font-size: 1.2rem; line-height: 1.6;">
+          I dig into systems, databases, and backend logic to build efficient, ethical software.
+        </p>
+        <button class="btn-primary" onclick="window.location.href='#projects'">See My Work</button>
+      </div>
+    </section>
+
+    <!-- 2. About Section -->
+    <section id="about" class="container" style="padding: 6rem 2rem;">
+      <h2 class="gradient-text" style="font-size: 3rem; margin-bottom: 2rem;">About Me</h2>
+      <div class="glass-card" style="max-width: 900px;">
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-main); margin-bottom: 2rem;">
+          I’m a developer who enjoys understanding how things work under the surface. Technology should be designed
+          intentionally and ethically. I prioritize depth, correctness, and reliability over speed or superficial
+          results.
+        </p>
+
+        <h3 style="color: var(--chrome-silver); margin-bottom: 1rem;">Core Expertise:</h3>
+        <ul
+          style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; list-style: none; color: var(--text-muted);">
+          <li><span style="color: var(--neon-cyan);">▹</span> Backend Development</li>
+          <li><span style="color: var(--neon-cyan);">▹</span> Database Systems & Mining</li>
+          <li><span style="color: var(--neon-cyan);">▹</span> API Design & Integration</li>
+          <li><span style="color: var(--neon-cyan);">▹</span> WebSockets & Real-time</li>
+          <li><span style="color: var(--neon-cyan);">▹</span> Blockchain Fundamentals</li>
+          <li><span style="color: var(--neon-cyan);">▹</span> System Architecture</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. Skills / Technologies -->
+    <section id="skills" class="container" style="padding: 6rem 2rem;">
+      <h2 class="gradient-text" style="font-size: 3rem; margin-bottom: 3rem;">Tech Stack</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+
+        <div class="glass-card" style="text-align: center;">
+          <h3 style="color: var(--text-main); margin-bottom: 1rem;">Languages</h3>
+          <p style="color: var(--text-muted);">JavaScript (ES6+), HTML5, CSS3, SQL, Python, C#</p>
+        </div>
+
+        <div class="glass-card" style="text-align: center;">
+          <h3 style="color: var(--text-main); margin-bottom: 1rem;">Backend</h3>
+          <p style="color: var(--text-muted);">Node.js, Express, REST APIs, WebSockets</p>
+        </div>
+
+        <div class="glass-card" style="text-align: center;">
+          <h3 style="color: var(--text-main); margin-bottom: 1rem;">Data</h3>
+          <p style="color: var(--text-muted);">MySQL, PostgreSQL, Data Mining, MongoDB</p>
+        </div>
+
+        <div class="glass-card" style="text-align: center;">
+          <h3 style="color: var(--text-main); margin-bottom: 1rem;">Tools</h3>
+          <p style="color: var(--text-muted);">Git, Docker, Postman, Figma, VS Code</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Projects Section -->
+    <section id="projects" class="container" style="padding: 6rem 2rem;">
+      <h2 class="gradient-text" style="font-size: 3rem; margin-bottom: 3rem;">Selected Work</h2>
+
+      <!-- Category Filter (Visual Only for now) -->
+      <div style="margin-bottom: 2rem; display: flex; gap: 1rem;">
+        <span style="color: var(--neon-cyan); border-bottom: 1px solid var(--neon-cyan);">All</span>
+        <span style="color: var(--text-muted); cursor: pointer;">Backend</span>
+        <span style="color: var(--text-muted); cursor: pointer;">Web Apps</span>
+        <span style="color: var(--text-muted); cursor: pointer;">Blockchain</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+        <article class="glass-card">
+          <h3 style="margin-bottom: 0.5rem; color: var(--neon-cyan);">Social Media Backend</h3>
+          <p style="font-size: 0.9rem; color: var(--chrome-silver); margin-bottom: 1rem;">Backend • API • Real-time</p>
+          <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
+            A scalable backend built with structured services, real-time messaging using WebSockets, and data-driven
+            feeds.
+          </p>
+          <div style="display: flex; gap: 1rem;">
+            <a href="#"
+              style="color: var(--text-main); text-decoration: none; border-bottom: 1px solid var(--text-muted);">GitHub</a>
+            <a href="#"
+              style="color: var(--text-main); text-decoration: none; border-bottom: 1px solid var(--text-muted);">Live
+              Demo</a>
+          </div>
+        </article>
+
+        <article class="glass-card">
+          <h3 style="margin-bottom: 0.5rem; color: var(--neon-cyan);">Blockchain Application</h3>
+          <p style="font-size: 0.9rem; color: var(--chrome-silver); margin-bottom: 1rem;">Crypto • Security • Logic</p>
+          <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
+            Wallets, transaction verification, mining logic, and peer-to-peer protocols built from first principles.
+          </p>
+          <div style="display: flex; gap: 1rem;">
+            <a href="#"
+              style="color: var(--text-main); text-decoration: none; border-bottom: 1px solid var(--text-muted);">GitHub</a>
+          </div>
+        </article>
+
+        <article class="glass-card">
+          <h3 style="margin-bottom: 0.5rem; color: var(--neon-cyan);">Data Mining Dashboard</h3>
+          <p style="font-size: 0.9rem; color: var(--chrome-silver); margin-bottom: 1rem;">BI • Data Analysis • SQL</p>
+          <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem;">
+            Business Intelligence tool utilizing complex SQL queries to visualize trends and generate reports from raw
+            data.
+          </p>
+          <div style="display: flex; gap: 1rem;">
+            <a href="#"
+              style="color: var(--text-main); text-decoration: none; border-bottom: 1px solid var(--text-muted);">GitHub</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 5. Experience / Education -->
+    <section id="experience" class="container" style="padding: 6rem 2rem;">
+      <h2 class="gradient-text" style="font-size: 3rem; margin-bottom: 3rem;">Journey</h2>
+
+      <div
+        style="display: flex; flex-direction: column; gap: 2rem; border-left: 2px solid var(--glass-border); padding-left: 2rem;">
+
+        <div style="position: relative;">
+          <div
+            style="position: absolute; left: -2.6rem; top: 0.5rem; width: 1rem; height: 1rem; background: var(--neon-cyan); border-radius: 50%;">
+          </div>
+          <h3 style="color: var(--text-main);">BSc Information & Communication Technology</h3>
+          <p style="color: var(--chrome-silver); font-size: 0.9rem;">Present</p>
+          <p style="color: var(--text-muted); margin-top: 0.5rem;">
+            Focusing on Software Engineering, Database Design, System-level concepts, and Computer Ethics.
+          </p>
+        </div>
+
+        <div style="position: relative;">
+          <div
+            style="position: absolute; left: -2.6rem; top: 0.5rem; width: 1rem; height: 1rem; background: var(--glass-border); border-radius: 50%;">
+          </div>
+          <h3 style="color: var(--text-main);">Business Intelligence & Management</h3>
+          <p style="color: var(--chrome-silver); font-size: 0.9rem;">Coursework</p>
+          <p style="color: var(--text-muted); margin-top: 0.5rem;">
+            Accounting, Foundations of Management, and Data Analysis for business contexts.
+          </p>
+        </div>
+
+        <div style="position: relative;">
+          <div
+            style="position: absolute; left: -2.6rem; top: 0.5rem; width: 1rem; height: 1rem; background: var(--glass-border); border-radius: 50%;">
+          </div>
+          <h3 style="color: var(--text-main);">Freelance Developer</h3>
+          <p style="color: var(--chrome-silver); font-size: 0.9rem;">2021 - 2023</p>
+          <p style="color: var(--text-muted); margin-top: 0.5rem;">
+            Delivered custom web solutions, learned client communication, and project lifecycle management.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. Footer / Contact -->
+    <footer id="contact" class="site-footer">
+      <div class="container" style="text-align: center; padding-bottom: 4rem;">
+        <h2 style="font-size: 3rem; color: var(--chrome-silver); margin-bottom: 1rem;">Let’s Connect</h2>
+        <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 3rem;">
+          Open for backend roles, system design collaborations, or tech discussions.
+        </p>
+
+        <!-- Simple Contact Details -->
+        <div
+          style="display: flex; justify-content: center; gap: 3rem; margin-bottom: 3rem; font-size: 1.2rem; align-items: center; flex-wrap: wrap;">
+          <a href="mailto:joeytisbudarko@gmail.com"
+            style="color: var(--neon-cyan); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            joeytisbudarko@gmail.com</a>
+          <a href="https://www.linkedin.com/in/josephdarko45"
+            style="color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            LinkedIn</a>
+          <a href="https://github.com/jollymusiq"
+            style="color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+            GitHub</a>
+        </div>
+
+        <button class="btn-primary" style="font-size: 1.1rem; padding: 1rem 3rem;"
+          onclick="window.location.href='mailto:joeytisbudarko@gmail.com'">Send Message</button>
+      </div>
+
+      <!-- Legal/Copyright -->
+      <div class="container"
+        style="border-top: 1px solid var(--glass-border); padding-top: 2rem; text-align: center; font-size: 0.9rem;">
+        <!-- Footer -->
+        <div class="container footer-content">
+          <!-- Brand Column -->
+          <div class="footer-brand">
+            <div class="nav-logo" style="margin-bottom: 1rem;">Joey<span style="color: var(--neon-cyan)">.</span>DEV
+            </div>
+            <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+              Building digital experiences that merge clean logic with futuristic aesthetics.
+            </p>
+            <div class="social-links">
+              <a href="https://github.com/jollymusiq" class="social-icon" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/josephdarko45" class="social-icon" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="Twitter">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                  </path>
+                </svg>
+              </a>
+              <a href="mailto:joeytisbudarko@gmail.com" class="social-icon" aria-label="Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Navigation Column -->
+          <div class="footer-nav">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="index.html#projects">Selected Work</a></li>
+              <li><a href="index.html#values">Philosophy</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact/Legal Column -->
+          <div class="footer-legal">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem;">
+              &copy; 2025 Joey.DEV<br>All rights reserved.
+            </p>
+          </div>
+
+        </div>
+        <p>&copy; 2025 Joey.DEV. Built with logic & aesthetics.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
