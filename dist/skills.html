@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joey.DEV | Skills</title>
+  <script type="module" crossorigin src="/assets/main-ADBGW4_s.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-BwBpxHRW.css">
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Floating Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">Joey<span style="color: var(--neon-cyan)">.</span>DEV</a>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html" class="active">Skills</a></li>
+            <li><a href="values.html">Values</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <button id="theme-toggle" class="btn-sm" style="padding: 0.6rem;">☀/☾</button>
+            <button class="btn-sm" onclick="window.location.href='contact.html'">Connect</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="container" style="padding-top: 10rem;">
+            <h1 style="margin-bottom: 2rem;">Technical <br> <span class="gradient-text">Arsenal</span></h1>
+            <p style="font-size: 1.2rem; margin-bottom: 4rem; max-width: 600px; color: var(--text-muted);">
+                I focus on learning foundations deeply. Tools change, but the principles of good engineering stay the
+                same.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+
+                <!-- Skill Group 1: Backend -->
+                <article class="glass-card">
+                    <h3
+                        style="color: var(--chrome-silver); margin-bottom: 1.5rem; font-size: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">
+                        Backend Core</h3>
+                    <ul style="list-style: none; color: var(--text-muted); line-height: 2.2;">
+                        <li><span style="color: var(--neon-cyan);">▸</span> APIs & System Design</li>
+                        <li><span style="color: var(--neon-cyan);">▸</span> Database Modeling (SQL/NoSQL)</li>
+                        <li><span style="color: var(--neon-cyan);">▸</span> WebSockets & Real-time Systems</li>
+                        <li><span style="color: var(--neon-cyan);">▸</span> Server Architecture</li>
+                    </ul>
+                </article>
+
+                <!-- Skill Group 2: Specialized -->
+                <article class="glass-card">
+                    <h3
+                        style="color: var(--chrome-silver); margin-bottom: 1.5rem; font-size: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">
+                        Specialized Tech</h3>
+                    <ul style="list-style: none; color: var(--text-muted); line-height: 2.2;">
+                        <li><span style="color: var(--neon-purple);">▸</span> Blockchain Fundamentals</li>
+                        <li><span style="color: var(--neon-purple);">▸</span> Cryptography Basics</li>
+                        <li><span style="color: var(--neon-purple);">▸</span> Security & Ethical Computing</li>
+                        <li><span style="color: var(--neon-purple);">▸</span> Distributed Consensus</li>
+                    </ul>
+                </article>
+
+                <!-- Skill Group 3: Tools -->
+                <article class="glass-card">
+                    <h3
+                        style="color: var(--chrome-silver); margin-bottom: 1.5rem; font-size: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">
+                        Tools & Workflow</h3>
+                    <ul style="list-style: none; color: var(--text-muted); line-height: 2.2;">
+                        <li><span style="color: var(--text-main);">▸</span> Git & Version Control</li>
+                        <li><span style="color: var(--text-main);">▸</span> Docker & Containerization</li>
+                        <li><span style="color: var(--text-main);">▸</span> Linux Environments</li>
+                        <li><span style="color: var(--text-main);">▸</span> CI/CD Pipelines</li>
+                    </ul>
+                </article>
+
+            </div>
+
+            <div style="margin-top: 4rem; text-align: center;">
+                <p
+                    style="font-size: 1.5rem; color: var(--chrome-silver);  padding: 2rem; border: 1px solid var(--glass-border); border-radius: 12px; display: inline-block;">
+                    "I focus on learning things deeply rather than touching everything once."
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="site-footer">
+            <div class="container" style="text-align: center; padding-bottom: 4rem;">
+                <h2 style="font-size: 3rem; color: var(--chrome-silver); margin-bottom: 1rem;">Let’s Connect</h2>
+                <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 3rem;">
+                    Open for backend roles, system design collaborations, or tech discussions.
+                </p>
+
+                <!-- Simple Contact Details -->
+                <div
+                    style="display: flex; justify-content: center; gap: 3rem; margin-bottom: 3rem; font-size: 1.2rem; align-items: center; flex-wrap: wrap;">
+                    <a href="mailto:joeytisbudarko@gmail.com"
+                        style="color: var(--neon-cyan); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        joeytisbudarko@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/josephdarko45"
+                        style="color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        LinkedIn</a>
+                    <a href="https://github.com/jollymusiq"
+                        style="color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                        GitHub</a>
+                </div>
+
+                <button class="btn-primary" style="font-size: 1.1rem; padding: 1rem 3rem;"
+                    onclick="window.location.href='mailto:joeytisbudarko@gmail.com'">Send Message</button>
+            </div>
+
+            <!-- Legal/Copyright -->
+            <div class="container"
+                style="border-top: 1px solid var(--glass-border); padding-top: 2rem; text-align: center; font-size: 0.9rem;">
+                <!-- Footer -->
+                <div class="container footer-content">
+                    <!-- Brand Column -->
+                    <div class="footer-brand">
+                        <div class="nav-logo" style="margin-bottom: 1rem;">Joey<span
+                                style="color: var(--neon-cyan)">.</span>DEV
+                        </div>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                            Building digital experiences that merge clean logic with futuristic aesthetics.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://github.com/jollymusiq" class="social-icon" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/josephdarko45" class="social-icon"
+                                aria-label="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Twitter">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="mailto:joeytisbudarko@gmail.com" class="social-icon" aria-label="Email">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Column -->
+                    <div class="footer-nav">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="index.html#projects">Selected Work</a></li>
+                            <li><a href="index.html#values">Philosophy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact/Legal Column -->
+                    <div class="footer-legal">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                        <p style="margin-top: 1.5rem; font-size: 0.9rem;">
+                            &copy; 2025 Joey.DEV<br>All rights reserved.
+                        </p>
+                    </div>
+
+                </div>
+                <p>&copy; 2025 Joey.DEV. Built with logic & aesthetics.</p>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
