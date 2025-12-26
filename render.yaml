@@ -1,6 +1,5 @@
 services:
-  - type: web
+  - type: static
     name: y2k-portfolio
-    runtime: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: bash start.sh
+    publishDir: dist
+    buildCommand: npm install && npm run build
