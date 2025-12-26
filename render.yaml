@@ -1,8 +1,6 @@
 services:
   - type: web
-    name: y2k-portfolio-app
+    name: y2k-portfolio
     runtime: python
-    rootDir: .
-    staticPublishPath: dist
     buildCommand: pip install -r requirements.txt
     startCommand: bash start.sh
